@@ -227,6 +227,7 @@ source = { virtual = "." }
 dependencies = [
     { name = "gitpython" },
     { name = "langchain-chroma" },
+    { name = "langchain-cohere" },
     { name = "langchain-community" },
     { name = "langchain-core" },
     { name = "langchain-openai" },
@@ -237,6 +238,7 @@ dependencies = [
 requires-dist = [
     { name = "gitpython", specifier = ">=3.1.44" },
     { name = "langchain-chroma", specifier = ">=0.2.1" },
+    { name = "langchain-cohere", specifier = ">=0.4.2" },
     { name = "langchain-community", specifier = ">=0.3.17" },
     { name = "langchain-core", specifier = ">=0.3.34" },
     { name = "langchain-openai", specifier = ">=0.3.4" },
@@ -345,6 +347,26 @@ wheels = [
 ]
 
 [[package]]
+name = "cohere"
+version = "5.13.12"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "fastavro" },
+    { name = "httpx" },
+    { name = "httpx-sse" },
+    { name = "pydantic" },
+    { name = "pydantic-core" },
+    { name = "requests" },
+    { name = "tokenizers" },
+    { name = "types-requests" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/f4/48/795c53b25b08ec353cc4f48dc5c199ac4615b3c331e716ac50c7cb07034c/cohere-5.13.12.tar.gz", hash = "sha256:97bb9ac107e580780b941acbabd3aa5e71960e6835398292c46aaa8a0a4cab88", size = 132860 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/50/c6/cffec9284d9713d28c6235a653a9a34c49b0f880f00cfa002252cdb8d033/cohere-5.13.12-py3-none-any.whl", hash = "sha256:2a043591a3e5280b47716a6b311e4c7f58e799364113a9cb81b50cd4f6c95f7e", size = 252856 },
+]
+
+[[package]]
 name = "colorama"
 version = "0.4.6"
 source = { registry = "https://pypi.org/simple" }
@@ -420,6 +442,26 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/a2/b2/5a5dc4affdb6661dea100324e19a7721d5dc524b464fe8e366c093fd7d87/fastapi-0.115.8.tar.gz", hash = "sha256:0ce9111231720190473e222cdf0f07f7206ad7e53ea02beb1d2dc36e2f0741e9", size = 295403 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/8f/7d/2d6ce181d7a5f51dedb8c06206cbf0ec026a99bf145edd309f9e17c3282f/fastapi-0.115.8-py3-none-any.whl", hash = "sha256:753a96dd7e036b34eeef8babdfcfe3f28ff79648f86551eb36bfc1b0bf4a8cbf", size = 94814 },
+]
+
+[[package]]
+name = "fastavro"
+version = "1.10.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f3/67/7121d2221e998706cac00fa779ec44c1c943cb65e8a7ed1bd57d78d93f2c/fastavro-1.10.0.tar.gz", hash = "sha256:47bf41ac6d52cdfe4a3da88c75a802321321b37b663a900d12765101a5d6886f", size = 987970 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9c/a4/8e69c0a5cd121e5d476237de1bde5a7947f791ae45768ae52ed0d3ea8d18/fastavro-1.10.0-cp312-cp312-macosx_10_13_universal2.whl", hash = "sha256:cfe57cb0d72f304bd0dcc5a3208ca6a7363a9ae76f3073307d095c9d053b29d4", size = 1036343 },
+    { url = "https://files.pythonhosted.org/packages/1e/01/aa219e2b33e5873d27b867ec0fad9f35f23d461114e1135a7e46c06786d2/fastavro-1.10.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:74e517440c824cb65fb29d3e3903a9406f4d7c75490cef47e55c4c82cdc66270", size = 3263368 },
+    { url = "https://files.pythonhosted.org/packages/a7/ba/1766e2d7d95df2e95e9e9a089dc7a537c0616720b053a111a918fa7ee6b6/fastavro-1.10.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:203c17d44cadde76e8eecb30f2d1b4f33eb478877552d71f049265dc6f2ecd10", size = 3328933 },
+    { url = "https://files.pythonhosted.org/packages/2e/40/26e56696b9696ab4fbba25a96b8037ca3f9fd8a8cc55b4b36400ef023e49/fastavro-1.10.0-cp312-cp312-musllinux_1_2_aarch64.whl", hash = "sha256:6575be7f2b5f94023b5a4e766b0251924945ad55e9a96672dc523656d17fe251", size = 3258045 },
+    { url = "https://files.pythonhosted.org/packages/4e/bc/2f6c92c06c5363372abe828bccdd95762f2c1983b261509f94189c38c8a1/fastavro-1.10.0-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:fe471deb675ed2f01ee2aac958fbf8ebb13ea00fa4ce7f87e57710a0bc592208", size = 3418001 },
+    { url = "https://files.pythonhosted.org/packages/0c/ce/cfd16546c04ebbca1be80873b533c788cec76f7bfac231bfac6786047572/fastavro-1.10.0-cp312-cp312-win_amd64.whl", hash = "sha256:567ff515f2a5d26d9674b31c95477f3e6022ec206124c62169bc2ffaf0889089", size = 487855 },
+    { url = "https://files.pythonhosted.org/packages/c9/c4/163cf154cc694c2dccc70cd6796db6214ac668a1260bf0310401dad188dc/fastavro-1.10.0-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:82263af0adfddb39c85f9517d736e1e940fe506dfcc35bc9ab9f85e0fa9236d8", size = 1022741 },
+    { url = "https://files.pythonhosted.org/packages/38/01/a24598f5f31b8582a92fe9c41bf91caeed50d5b5eaa7576e6f8b23cb488d/fastavro-1.10.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:566c193109ff0ff84f1072a165b7106c4f96050078a4e6ac7391f81ca1ef3efa", size = 3237421 },
+    { url = "https://files.pythonhosted.org/packages/a7/bf/08bcf65cfb7feb0e5b1329fafeb4a9b95b7b5ec723ba58c7dbd0d04ded34/fastavro-1.10.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e400d2e55d068404d9fea7c5021f8b999c6f9d9afa1d1f3652ec92c105ffcbdd", size = 3300222 },
+    { url = "https://files.pythonhosted.org/packages/53/4d/a6c25f3166328f8306ec2e6be1123ed78a55b8ab774a43a661124508881f/fastavro-1.10.0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:9b8227497f71565270f9249fc9af32a93644ca683a0167cfe66d203845c3a038", size = 3233276 },
+    { url = "https://files.pythonhosted.org/packages/47/1c/b2b2ce2bf866a248ae23e96a87b3b8369427ff79be9112073039bee1d245/fastavro-1.10.0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:8e62d04c65461b30ac6d314e4197ad666371e97ae8cb2c16f971d802f6c7f514", size = 3388936 },
+    { url = "https://files.pythonhosted.org/packages/1f/2c/43927e22a2d57587b3aa09765098a6d833246b672d34c10c5f135414745a/fastavro-1.10.0-cp313-cp313-win_amd64.whl", hash = "sha256:86baf8c9740ab570d0d4d18517da71626fe9be4d1142bea684db52bd5adb078f", size = 483967 },
 ]
 
 [[package]]
@@ -837,6 +879,22 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/39/81/7a6bb029a87511df844c33d38a8c97197e5796fcb1bf9e19b928ceba69cd/langchain_chroma-0.2.1.tar.gz", hash = "sha256:ebda061164243c9fdd081903aaa8f8559847d3aec945b9aa143a5075f57cd4dd", size = 11034 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/36/3d/865bfe0b076ee2528035b6649e3ef6aad1990920fddffba00e34226c72d9/langchain_chroma-0.2.1-py3-none-any.whl", hash = "sha256:4acc3fc5e919991ab412153819965e8dd9caf7e65873be2da432dc8e59cf05bb", size = 11162 },
+]
+
+[[package]]
+name = "langchain-cohere"
+version = "0.4.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cohere" },
+    { name = "langchain-community" },
+    { name = "langchain-core" },
+    { name = "pydantic" },
+    { name = "types-pyyaml" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/24/c8/5bbc627c88231317f2c6f463a44b40fb1cb2cf0a0f61cdf4e2ee95f9eb28/langchain_cohere-0.4.2.tar.gz", hash = "sha256:96971055a806b63e388d08e4663fc16957cf07ad234a1524ef31f039790bb35b", size = 36391 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f4/f0/0f2e4dc99c52d458cd23f7d8d18bb25280ff49529a4fd34e59a92faf6d46/langchain_cohere-0.4.2-py3-none-any.whl", hash = "sha256:1d4e5f9212daa64d997785de7a79e3e1c3971acba1d987f1a99a9a1be6acfb40", size = 42205 },
 ]
 
 [[package]]
@@ -1858,6 +1916,27 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/cb/ce/dca7b219718afd37a0068f4f2530a727c2b74a8b6e8e0c0080a4c0de4fcd/typer-0.15.1.tar.gz", hash = "sha256:a0588c0a7fa68a1978a069818657778f86abe6ff5ea6abf472f940a08bfe4f0a", size = 99789 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d0/cc/0a838ba5ca64dc832aa43f727bd586309846b0ffb2ce52422543e6075e8a/typer-0.15.1-py3-none-any.whl", hash = "sha256:7994fb7b8155b64d3402518560648446072864beefd44aa2dc36972a5972e847", size = 44908 },
+]
+
+[[package]]
+name = "types-pyyaml"
+version = "6.0.12.20241230"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/9a/f9/4d566925bcf9396136c0a2e5dc7e230ff08d86fa011a69888dd184469d80/types_pyyaml-6.0.12.20241230.tar.gz", hash = "sha256:7f07622dbd34bb9c8b264fe860a17e0efcad00d50b5f27e93984909d9363498c", size = 17078 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e8/c1/48474fbead512b70ccdb4f81ba5eb4a58f69d100ba19f17c92c0c4f50ae6/types_PyYAML-6.0.12.20241230-py3-none-any.whl", hash = "sha256:fa4d32565219b68e6dee5f67534c722e53c00d1cfc09c435ef04d7353e1e96e6", size = 20029 },
+]
+
+[[package]]
+name = "types-requests"
+version = "2.32.0.20241016"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "urllib3" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/fa/3c/4f2a430c01a22abd49a583b6b944173e39e7d01b688190a5618bd59a2e22/types-requests-2.32.0.20241016.tar.gz", hash = "sha256:0d9cad2f27515d0e3e3da7134a1b6f28fb97129d86b867f24d9c726452634d95", size = 18065 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d7/01/485b3026ff90e5190b5e24f1711522e06c79f4a56c8f4b95848ac072e20f/types_requests-2.32.0.20241016-py3-none-any.whl", hash = "sha256:4195d62d6d3e043a4eaaf08ff8a62184584d2e8684e9d2aa178c7915a7da3747", size = 15836 },
 ]
 
 [[package]]
