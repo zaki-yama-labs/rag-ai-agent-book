@@ -4,4 +4,14 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "chromadb>=0.6.3",
+    "gitpython>=3.1.44",
+    "langchain-chroma>=0.2.2",
+    "langchain-community>=0.3.18",
+    "langchain-core>=0.3.40",
+    "langchain-openai>=0.3.7",
+    "nest-asyncio>=1.6.0",
+    "ragas>=0.2.13",
+    "rapidfuzz>=3.12.2",
+]
